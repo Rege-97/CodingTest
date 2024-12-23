@@ -13,7 +13,7 @@ public class Baekjoon06_03 {
 
 		for (int i = 1; i <= num; i++) {
 			for (int j = i; j <= num - 1; j++) {
-				System.out.print("-");
+				System.out.print(" ");
 			}
 			for (int z = i; z <= num2; z++) {
 				System.out.print("*");
@@ -21,19 +21,18 @@ public class Baekjoon06_03 {
 			System.out.println();
 			num2 += 3;
 		}
-		num2=1;
+		num2 = (num * 2) - 3;
 		int num3 = 1;
-		num2 = ((num - 1) * 2) - 1;
 		for (int i = 1; i <= num - 1; i++) {
 			for (int j = i; j <= num3; j++) {
-				System.out.print("-");
+				System.out.print(" ");
 			}
 			for (int z = i; z <= num2; z++) {
 				System.out.print("*");
 			}
 			System.out.println();
 			num3 += 2;
-			num2 += 3;
+			num2--;
 		}
 
 	}

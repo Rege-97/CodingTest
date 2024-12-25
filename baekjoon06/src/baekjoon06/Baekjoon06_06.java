@@ -27,7 +27,7 @@ public class Baekjoon06_06 {
 
 			} else if (arr[i] == 'd' && arr[i + 1] == 'z' && arr[i + 2] == '=' && i < arr.length - 2) {
 				count++;
-				i++;
+				i+=2;
 
 			} else if (arr[i] == 'd' && arr[i + 1] == '-' && i < arr.length - 1) {
 				count++;

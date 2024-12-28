@@ -19,7 +19,7 @@ public class Baekjoon03_10 {
 
 				}
 			}
-			System.out.println();
+			System.out.println(); 
 		}
 
 	}

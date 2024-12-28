@@ -11,40 +11,23 @@ public class Baekjoon08_02 {
 
 		int num1 = Integer.parseInt(st.nextToken());
 		int num2 = Integer.parseInt(st.nextToken());
-		int count = 0;
-		int temp = num1;
+		
+		String str="";
 
-		while (true) {
-			if (temp / num2 >= num2) {
-				temp = temp / num2;
-				count++;
-			} else {
-				if(count==0) {
-					count++;
-				}else {
-					count+=2;					
-				}
-				break;
-			}
-		}
-		char arr[] = new char[count];
-
-		for (int i = 0; i < arr.length; i++) {
+		while(num1>0) {
 
 			if ((num1 % num2) >= 0 && (num1 % num2) <= 9) {
-				arr[arr.length - 1 - i] = (char) ((num1 % num2) + 48);
+				str+= (char) ((num1 % num2) + 48);
 			} else if ((num1 % num2) >= 10 && (num1 % num2) <= 35) {
-				arr[arr.length - 1 - i] = (char) ((num1 % num2) + 55);
+				str+= (char) ((num1 % num2) + 55);
 			}
 
 			num1 = num1 / num2;
 		}
 
-		for(int i =0;i<arr.length;i++) {
-			System.out.print(arr[i]);
+		for (int i = str.length()-1; i >=0 ; i--) {
+			System.out.print(str.charAt(i));
 		}
-
-
 
 	}
 

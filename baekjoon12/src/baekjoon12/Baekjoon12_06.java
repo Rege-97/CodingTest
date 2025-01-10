@@ -15,13 +15,12 @@ public class Baekjoon12_06 {
 		if (temp / 5 != 0) {
 			count[0] = temp / 5;
 			temp = temp % 5;
-			
+
 			if (temp != 0) {
-				count[1] = -1;
-				
+				count[0] = -1;
+
 			}
 		}
-
 
 		temp = num;
 
@@ -34,23 +33,34 @@ public class Baekjoon12_06 {
 					break;
 				}
 
-			}
-
-			if (temp != 0) {
+			} else {
 				count[1] = -1;
 				break;
 			}
 		}
 
 		Arrays.sort(count);
+		int result = 0;
 
-		if (count[0] == -1 && count[1] == -1) {
-			System.out.println(-1);
-		} else if (count[0] == -1) {
-			System.out.println(count[1]);
+		if (count[0] <= 0) {
+			if (count[1] <= 0) {
+				result = -1;
+			} else {
+				result = count[1];
+			}
+		} else if (count[1] <= 0) {
+			if (count[0] <= 0) {
+				result = -1;
+			} else {
+				result = count[0];
+			}
+		} else if (count[0] <= count[1]) {
+			result = count[0];
 		} else {
-			System.out.println(count[0]);
+			result = count[1];
 		}
+
+		System.out.println(result);
 
 	}
 
